@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main">
+        <form id="form" method="post">
+            <div class="wrapper">
+                <label for="form-name">Введите ФИО</label>
+                <input type="text" name="" id="form-name" required>
+            </div>
+            <div class="wrapper">
+                <label for="form-email">Введите почту</label>
+                <input type="email" name="" id="form-email" required readonly>
+            </div>
+            <div class="wrapper">
+                <label for="form-phone">Введите номер телефона</label>
+                <input type="number" name="" id="form-phone" required>
+            </div>
+            <button type="submit">Создать пользователя</button>
+        </form>
+
+        <div id="container"></div>
+        <div id="toast" class="toast"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

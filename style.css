@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Geist:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
+
+
+* {
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Geist', sans-serif;
+}
+
+.main {
+    max-width:  1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+form, .container {
+    flex: 1;
+}
+
+form {
+    margin-top: 20px;
+    border: 3.5px dotted;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+label, input, button {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input, button {
+    padding: 12px 8px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+
+.container div {
+    margin-top: 20px;
+    padding: 32px 24px;
+    border: solid 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.toast {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    min-width: 300px;
+    padding: 16px 20px;
+    color: black;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateX(120%);
+    transition: 0.4s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
