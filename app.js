@@ -6,12 +6,13 @@ const toast = document.getElementById("toast");
 const container = document.getElementById("container");
 container.setAttribute("class", "container");
 // TODO DELETE FUNC
-const deleteUser = async (id) => {
+const deleteUser = async (box, id) => {
   try {
     const response = await fetch(`${BASE_URL}/users/${id}`, {
       method: "DELETE",
     });
     console.log("Пользователь удалён");
+    box.remove()
   } catch (err) {
     console.error("ERROR", err.message);
   }
@@ -35,7 +36,7 @@ const renderUsers = (users = []) => {
     const deleteBtn = box.querySelector(".delete-btn");
 
     deleteBtn.addEventListener("click", () => {
-      deleteUser(id);
+      deleteUser(box, id);
     });
 
     container.append(box);
